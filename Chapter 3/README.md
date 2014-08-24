@@ -1,7 +1,5 @@
-Chapter 3
+Chapter 3: Scalable Vector Graphics
 ==========
-
-Supplementary materials for Chapter 3, __Scalable Vector Graphics__
 
 ##Files
 
