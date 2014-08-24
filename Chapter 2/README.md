@@ -1,7 +1,5 @@
-Chapter 2
+Chapter 2: Finding a Data-Driven Story and Telling It Visually
 ==========
-
-Supplementary materials for Chapter 2, __Finding a Data-Driven Story and Telling It Visually__
 
 ##Files
 
