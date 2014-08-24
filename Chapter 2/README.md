@@ -1,7 +1,7 @@
 Chapter 2
 ==========
 
-Supplementary materials for Chapter 2.
+Supplementary materials for Chapter 2, __Finding a Data-Driven Story and Telling It Visually__
 
 ##Files
 
@@ -11,4 +11,4 @@ Name | Description
 
 ##More Information
 
-The file in this directory is a Microsoft Excel file. Clicking on the link above will TK TK. If you don't have Microsoft Excel (and don't want to purchase it), you can download the free productivity software suite, [Open Office](https://www.openoffice.org/).
+The file in this directory is a Microsoft Excel file. You can dowload it by [clicking here](https://github.com/ritchieking/d3-book/blob/master/Chapter%202/WPP2012_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.XLS?raw=true). If you don't have Microsoft Excel (and don't want to purchase it), you can open and manipulate the file using the free productivity software suite, [Open Office](https://www.openoffice.org/).
