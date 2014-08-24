@@ -1,6 +1,8 @@
 Chapter 3: Scalable Vector Graphics
 ==========
 
+[Chapter 3 errata](https://github.com/ritchieking/d3-book/blob/master/Errata/README.md#chapter-3)
+
 ##Files
 
 Name | Description

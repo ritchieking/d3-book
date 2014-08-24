@@ -1,6 +1,8 @@
 Chapter 1: Visual Storytelling and D3
 ==========
 
+[Chapter 1 errata](https://github.com/ritchieking/d3-book/blob/master/Errata/README.md#chapter-1)
+
 ##Tools
 
 __A text editor__
