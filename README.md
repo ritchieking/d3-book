@@ -15,7 +15,7 @@ The book covers the fundamentals of D3 by teaching you how to make an interactiv
 
 ----------------------------
 
-[![](http://cl.ly/image/1D361L2V213u/Image%202014-08-24%20at%202.03.45%20PM.png)](http://ritchiesking.com/book/chart/)
+[![](http://cl.ly/image/0n1Z3H3E0t0f/Image%202014-08-24%20at%202.13.36%20PM.png)](http://ritchiesking.com/book/chart/)
 
 
 ## The Pitch
