@@ -5,6 +5,8 @@ All of the supplementary materials for _Visual Storytelling with D3_, plus more 
 
 ## The Book
 
+__[Table of Contents](https://github.com/ritchieking/d3-book/blob/master/table-of-contents.md)__
+
 _Visual Storytelling with D3_ is an introduction to JavaScript's [excellent D3 library](http://d3js.org/). It's currently available to [order on Amazon](http://www.amazon.com/Visual-Storytelling-Introduction-Visualization-Addison-Wesley/dp/0321933176/ref=sr_1_1?ie=UTF8&qid=1407371209&sr=8-1&keywords=visual+storytelling+with+d3), and shipping starts on September 8, 2014.
 
 [![](http://ritchiesking.com/book/imgs/bookcover.jpg)](http://www.amazon.com/Visual-Storytelling-Introduction-Visualization-Addison-Wesley/dp/0321933176/ref=sr_1_1?ie=UTF8&qid=1407371209&sr=8-1&keywords=visual+storytelling+with+d3)
