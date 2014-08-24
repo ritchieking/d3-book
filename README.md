@@ -13,7 +13,9 @@ _Visual Storytelling with D3_ is an introduction to JavaScript's [excellent D3 l
 
 The book covers the fundamentals of D3 by teaching you how to make an interactive and animated bar chart. Want to take it for a spin? Click the screenshot below. After reading _Visual Storytelling with D3_ you'll be able to build charts like this for the web, and much more.
 
-[![](http://cl.ly/image/2h1y2y0a0w1L/Image%202014-08-24%20at%202.02.34%20PM.png)](http://ritchiesking.com/book/chart/)
+----------------------------
+
+[![](http://cl.ly/image/1D361L2V213u/Image%202014-08-24%20at%202.03.45%20PM.png)](http://ritchiesking.com/book/chart/)
 
 
 ## The Pitch
