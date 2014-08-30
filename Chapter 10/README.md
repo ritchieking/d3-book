@@ -12,4 +12,4 @@ __How to make blocks:__
 
 1. Read [this tutorial](http://bost.ocks.org/mike/block/)
 
-Sometimes you'll get stuck when you're trying to make something and you won't be able to get unstuck by just looking at other people's example code. When this happens, try searching message boards. As of writing, Stack Overflow has almost [10,000 threads](http://stackoverflow.com/questions/tagged/d3.js) dedicated to answering questions about D3, and the [Google Group](https://groups.google.com/forum/#!forum/d3-js) is very active, too.
+Sometimes you'll get stuck when you're trying to make something and you won't be able to get unstuck by just looking at other people's example code. When this happens, try searching message boards. As of writing, Stack Overflow has almost [10,000 threads](http://stackoverflow.com/questions/tagged/d3.js) dedicated to answering questions about D3; the [D3 Google Group](https://groups.google.com/forum/#!forum/d3-js) is very active, too.
