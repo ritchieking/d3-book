@@ -5,7 +5,7 @@ Chapter 5: Data-Joins: Enter
 
 Name | Description
 ---|---------
-`pop2010-data-joins.html` | The example bar chart created with D3's data-joins
+`pop2010-data-joins.html` | The example bar chart created with data-joins
 
 ##More Information
 
