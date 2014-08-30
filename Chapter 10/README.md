@@ -1,7 +1,7 @@
 Chapter 10: Striking Out on Your Own
 ==========
 
-Mike Bostock has blessed the world of D3 users with a profusion of examples for how to use the library. He's even created his own way to putting those examples on display – an interface for github gists that renders that output of the code and shows the code itself all on the same page. It's called a block.
+Mike Bostock has blessed the world of D3 users with a profusion of examples for how to use the library. He's even created his own way to putting those examples on display – an interface for github gists that renders the output of the code and shows the code itself all on the same page. It's called a block.
 
 __How to find blocks:__
 
