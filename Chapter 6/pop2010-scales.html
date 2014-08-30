@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+     body {
+          font-family: Helvetica;
+     }
+     svg {
+          width:500px;
+          height:500px;
+     }
+     .top-label {
+          font-size: 13px;
+          font-style: italic;
+          text-transform: uppercase;
+          float: left;
+     }
+     .age-label {
+          text-align: right;
+          font-weight: bold;
+          width: 90px;
+          padding-right: 10px;
+     }
+     .clearfix {
+          clear: both;
+     }
+     .bar {
+          fill: DarkSlateBlue;
+     }
+     .bar-label {
+          text-anchor: end;
+     }
+     .axis-label {
+          text-anchor: middle;
+          font-size: 13px;
+     }
+     .x.axis line {
+       fill: none;
+       stroke: #000;
+     }
+     .x.axis text {
+          font-size: 13px;
+     }
+     .axis path {
+          display:none;
+     }
+     .y.axis line {
+          display:none;
+     }
+</style>
+</head>
+<body>
+     <!--  -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+     var popData = [
+          {age:"80 and up", value:0.016},
+          {age:"75 - 79", value:0.015},
+          {age:"70 - 74", value:0.021},
+          {age:"65 - 69", value:0.026},
+          {age:"60 - 64", value:0.034},
+          {age:"55 - 59", value:0.045},
+          {age:"50 - 54", value:0.051},
+          {age:"45 - 49", value:0.060},
+          {age:"40 - 44", value:0.066},
+          {age:"35 - 39", value:0.071},
+          {age:"30 - 34", value:0.073},
+          {age:"25 - 29", value:0.081},
+          {age:"20 - 24", value:0.089},
+          {age:"15 - 19", value:0.088},
+          {age:"10 - 14", value:0.086},
+          {age:"5 - 9", value:0.088},
+          {age:"0 - 4", value:0.093}
+     ];
+
+    var margin = {top: 30, right: 0, bottom: 0, left: 100},
+          width = 500 - margin.left - margin.left,
+          height = 450 - margin.top - margin.bottom;
+
+     var x = d3.scale.linear()
+          .domain([0, d3.max(popData, function(element) { return element.value; })])
+          .range([0, width]);
+
+     var y = d3.scale.ordinal()
+          .domain(popData.map(function(element) {return element.age}))
+          .rangeBands([0, height], 0.2, 0);
+
+     var xAxis = d3.svg.axis()
+          .scale(x)
+          .orient("top")
+          .ticks(5, "%");
+
+     var yAxis = d3.svg.axis()
+          .scale(y)
+          .orient("left");
+
+     var body = d3.select("body");
+
+     body.append("h2")
+          .text("Age distribution of the world, 2010");
+
+     body.append("div")
+          .attr("class", "top-label age-label")
+       .append("p")
+          .text("age group");
+
+     body.append("div")
+          .attr("class", "top-label")
+       .append("p")
+          .text("portion of the population");
+
+     body.append("div")
+          .attr("class", "clearfix");
+
+    var svg = body.append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var barGroup = svg.append("g")
+          .attr("class", "bar");
+
+     barGroup.selectAll("rect")
+          .data(popData)
+       .enter().append("rect")
+          .attr("x", 0)
+          .attr("y", function(d) {return y(d.age)})
+          .attr("width", function(d) {return x(d.value)})
+          .attr("height", y.rangeBand());
+
+      svg.append("g")
+          .call(xAxis)
+          .attr("class", "x axis");
+
+     svg.append("g")
+          .call(yAxis)
+          .attr("class","y axis");
+</script>
+</body>
+</html>
