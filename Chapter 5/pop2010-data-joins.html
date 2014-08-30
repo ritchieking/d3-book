@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    body {
+        font-family: Helvetica;
+    }
+    svg {
+        width:500px;
+        height:500px;
+    }
+    .top-label {
+        font-size: 13px;
+        font-style: italic;
+        text-transform: uppercase;
+        float: left;
+    }
+    .age-label {
+        text-align: right;
+        font-weight: bold;
+        width: 90px;
+        padding-right: 10px;
+    }
+    .clearfix {
+        clear: both;
+    }
+    .bar {
+        fill: DarkSlateBlue;
+    }
+    .bar-label {
+        text-anchor: end;
+    }
+    .axis-label {
+        text-anchor: middle;
+        font-size: 13px;
+    }
+</style>
+</head>
+<body>
+    <!--  -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+    var popData = [
+        {age:"80 and up", value:1.6, position:0},
+        {age:"75 - 79", value:1.5, position:1},
+        {age:"70 - 74", value:2.1, position:2},
+        {age:"65 - 69", value:2.6, position:3},
+        {age:"60 - 64", value:3.4, position:4},
+        {age:"55 - 59", value:4.5, position:5},
+        {age:"50 - 54", value:5.1, position:6},
+        {age:"45 - 49", value:6.0, position:7},
+        {age:"40 - 44", value:6.6, position:8},
+        {age:"35 - 39", value:7.1, position:9},
+        {age:"30 - 34", value:7.3, position:10},
+        {age:"25 - 29", value:8.1, position:11},
+        {age:"20 - 24", value:8.9, position:12},
+        {age:"15 - 19", value:8.8, position:13},
+        {age:"10 - 14", value:8.6, position:14},
+        {age:"5 - 9", value:8.8, position:15},
+        {age:"0 - 4", value:9.3, position:16}
+    ];
+        
+    var axisData = [0, 2.5, 5.0, 7.5];
+
+    var width = 400,
+        leftMargin = 100,
+        topMargin = 30,
+        barHeight = 20,
+        barGap = 5,
+        tickGap = 5,
+        tickHeight = 10,
+        scaleFactor = width / popData[16].value,
+        barSpacing = barHeight + barGap,
+        translateText = "translate(" + leftMargin + "," + topMargin + ")",
+        scaleText = "scale(" + scaleFactor + ",1)";
+
+    var body = d3.select("body");
+
+    body.append("h2")
+        .text("Age distribution of the world, 2010");
+
+    body.append("div")
+        .attr("class", "top-label age-label")
+      .append("p")
+        .text("age group");
+
+    body.append("div")
+        .attr("class", "top-label")
+      .append("p")
+        .text("portion of the population");
+
+    body.append("div")
+        .attr("class", "clearfix")
+
+    var svg = body.append("svg");
+
+    var barGroup = svg.append("g")
+        .attr("transform", translateText + " " + scaleText)
+        .attr("class", "bar");
+
+    barGroup.selectAll("rect")
+        .data(popData)
+      .enter().append("rect")
+        .attr("x", 0)
+        .attr("y", function(d) {return d.position * barSpacing})
+        .attr("width", function(d) {return d.value})
+        .attr("height", barHeight);
+
+    var barLabelGroup = svg.append("g")
+        .attr("transform", translateText)
+        .attr("class","bar-label");
+
+    barLabelGroup.selectAll("text")
+        .data(popData)
+      .enter().append("text")
+        .attr("x",-10)
+        .attr("y", function(d) {return d.position * barSpacing + barHeight*(2/3)})
+        .text(function(d) {return d.age});
+
+    var axisTickGroup = svg.append("g")
+        .attr("transform", translateText)
+        .attr("stroke", "black");
+
+    axisTickGroup.selectAll("line")
+        .data(axisData)
+      .enter().append("line")
+        .attr("x1", function(d) {return d*scaleFactor})
+        .attr("x2", function(d) {return d*scaleFactor})
+        .attr("y1", 0)
+        .attr("y2", -tickHeight);
+
+    var axisLabelGroup = svg.append("g")
+        .attr("transform", translateText)
+        .attr("class", "axis-label");
+
+    axisLabelGroup.selectAll("text")
+        .data(axisData)
+      .enter().append("text")
+        .attr("x", function(d) {return d*scaleFactor})
+        .attr("y", -tickHeight - tickGap)
+        .text(function(d) {return d + "%"});
+</script>
+</body>
+</html>
