@@ -5,11 +5,11 @@ Appendix B: Cleaning the Population Distribution Data
 
 Name | Description
 ---|---------
-`WPP2012_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.XLS` | Raw global population projections from the UN Population Division. This is the raw data used to make the example age distribution bar chart in the book.
+`WPP2015_POP_F07_1_POPULATION_BY_AGE_BOTH_SEXES.XLS` | Raw global population projections from the UN Population Division. This is the raw data used to make the example age distribution bar chart in the book.
 
 ##More Information
 
-The file in this directory is a Microsoft Excel file. You can dowload it by [clicking here](https://github.com/ritchieking/d3-book/blob/master/Appendix%20B/WPP2012_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.XLS?raw=true).
+The file in this directory is a Microsoft Excel file. You can dowload it by [clicking here](https://github.com/ritchieking/d3-book/blob/master/Appendix%20B/WPP2015_POP_F07_1_POPULATION_BY_AGE_BOTH_SEXES.XLS?raw=true).
 
 The data cleaning steps that this chapter takes you through require two pieces of free software:
 
